@@ -1,0 +1,201 @@
+git clone https://github.com/username/username.github.io
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oasis Project - Ropa de Lujo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos modernos y elegantes */
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #7B1FA2;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    .cta-button {
+      background-color: #00BCD4;
+      color: white;
+      padding: 18px 36px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #00ACC1;
+    }
+    .features {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+    .features h2 {
+      margin-bottom: 60px;
+      color: #7B1FA2;
+    }
+    .feature-item {
+      display: inline-block;
+      width: 30%;
+      margin: 0 20px;
+      vertical-align: top;
+    }
+    .feature-item img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    .feature-item h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #7B1FA2;
+    }
+    .feature-item p {
+      font-size: 16px;
+      color: #666;
+    }
+    footer {
+      background-color: #7B1FA2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    /* Estilos para la sección de ayuda */
+    .help-section {
+      background-color: #7B1FA2;
+      color: white;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .help-section button {
+      background: none;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 0;
+    }
+    .help-popup {
+      display: none;
+      position: fixed;
+      top: 50px;
+      right: 20px;
+      background-color: white;
+      color: #7B1FA2;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+    }
+    .help-popup p {
+      margin: 0;
+      font-size: 16px;
+    }
+    .help-popup button {
+      margin-top: 10px;
+      background-color: #7B1FA2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .help-popup button:hover {
+      background-color: #6A1B9A;
+    }
+
+    /* Fondo blanco al hacer clic */
+    .white-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: 1002;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sección de ayuda -->
+  <div class="help-section">
+    <button onclick="toggleHelpPopup()">AYUDA</button>
+  </div>
+  <div class="help-popup" id="helpPopup">
+    <p>CONTÁCTANOS A ESTE GMAIL: <strong>oasis.project00@gmail.com</strong></p>
+    <button onclick="toggleHelpPopup()">Cerrar</button>
+  </div>
+
+  <div class="white-overlay" id="whiteOverlay"></div>
+
+  <header>
+    <h1>Bienvenido a Oasis Project</h1>
+    <h2>Ropa de Lujo Excepcional</h2>
+    <a href="#" class="cta-button" onclick="showWhiteOverlay()">Comprar Ahora</a>
+  </header>
+  <section class="features">
+    <h2>Descubre lo Mejor de Oasis Project</h2>
+    <div class="feature-item">
+      <img src="https://via.placeholder.com/100" alt="Materiales">
+      <h3>Materiales de Calidad</h3>
+      <p>Nuestras prendas están hechas con los mejores materiales, brindando una experiencia de uso excepcional.</p>
+    </div>
+    <div class="feature-item">
+      <img src="https://via.placeholder.com/100" alt="Diseño">
+      <h3>Diseño Innovador</h3>
+      <p>Nuestros diseñadores crean prendas únicas y de vanguardia que resaltan tu estilo personal.</p>
+    </div>
+    <div class="feature-item">
+      <img src="https://via.placeholder.com/100" alt="Sostenibilidad">
+      <h3>Sostenibilidad</h3>
+      <p>Nos comprometemos con el medio ambiente y utilizamos procesos de producción respetuosos con el planeta.</p>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Oasis Project. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleHelpPopup() {
+      const popup = document.getElementById('helpPopup');
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function showWhiteOverlay() {
+      const overlay = document.getElementById('whiteOverlay');
+      overlay.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
